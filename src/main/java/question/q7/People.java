@@ -6,6 +6,7 @@ public class People {
     public People() {};
 
     public String speakLanguage (String language) {
+
         return "XX";
     }
 }

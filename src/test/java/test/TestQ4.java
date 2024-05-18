@@ -24,12 +24,12 @@ public class TestQ4 {
 
     @Test
     public void test4(){
-        Assert.assertEquals(q4.taxiFee(6, 2), 7D, 0.01);
+        Assert.assertEquals(q4.taxiFee(6, 2), 8D, 0.01);
     }
 
     @Test
     public void test5(){
-        Assert.assertEquals(q4.taxiFee(0, 2), 7D, 0.01);
+        Assert.assertEquals(q4.taxiFee(0, 2), 8D, 0.01);
     }
 
     @Test

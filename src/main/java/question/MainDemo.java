@@ -5,6 +5,12 @@ package question;
 
 public class MainDemo {
     public static void main(String[] args) {
+        //Q1 q1 = new Q1();
+        //int [] scores = {1,2,5,8};
+        //q1.reverseScore(scores);
 
+        Q4 q4 = new Q4();
+
+        q4.taxiFee(6,2);
     }
 }

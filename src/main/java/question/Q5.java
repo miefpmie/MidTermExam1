@@ -13,6 +13,13 @@ package question;
 
 public class Q5 {
     public boolean validEmail(String email) {
-        return true;
+       // 邮箱有2部分构成: @前面的部分 和 @后面的部分
+        //String 类的 public boolean matches(String regex)
+        String regex = "//d{1}[a-zA-Z]{1}//w{7,10}+@[a-zA-Z_0-9]{2,6}(\\.[a-zA-Z_0-9]{2,3})+";
+        //其中必须包括至少1个数字，1个字
+        //如果是前面几个为数字或者字母 则返回flase；
+
+        boolean flag = email.matches(regex);
+        return flag;
     }
 }
