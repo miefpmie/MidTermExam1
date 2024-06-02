@@ -9,8 +9,10 @@ public class MainDemo {
         //int [] scores = {1,2,5,8};
         //q1.reverseScore(scores);
 
-        Q4 q4 = new Q4();
-
-        q4.taxiFee(6,2);
+        Q3 q3 = new Q3();
+        int [] array1 = {2,6,7,7,9};
+        int [] array2 = {3,8};
+        q3.mergeArray(array1,array2);
+        System.out.println(q3);
     }
 }

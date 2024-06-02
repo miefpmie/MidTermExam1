@@ -10,13 +10,64 @@ package question;
  */
 
 public class Q3 {
-    public int [] mergeArray(int [] array1, int [] array2){
-       //方法返回值: 1个从小到大的数组
-        int [] min;
-        //先遍历一下 然后呢 没了
+    public int[] mergeArray(int[] array1, int[] array2) {
+        //方法返回值: 1个从小到大的数组
+        int[] min = new int[array1.length + array2.length];
+        /* //先遍历一下
+        for (int i=0;i<array1.length;i++){
+            min[i]=array1[i];
+        }
+        for (int i=0;i<array2.length ;i++){
+            min[i+ array1.length]=array2[i];
+        }
+        //排序
+        for(int x=0;x<min.length-1;x++) {
+            for (int y = 0; y < min.length - 1; y++) {
+                if (min[y] > min[y + 1]) {
+                    int temp = min[y];
+                    min[y] = min[y + 1];
+                    min[y + 1] = temp;
+                }
+            }
+        }
+        return min;*/
 
-
-
-        return null;
+        int a = 0;
+        int b = 0;
+        int i = 0;
+        //情况特殊的
+        if (array1.length == 0 && array2.length != 0) {
+            return array2;
+        } else if (array1.length != 0 && array2.length == 0) {
+            return array1;
+        } else if (array1.length == 0 && array2.length == 0) {
+            return min;//返回空的数组 不会改
+        }
+        while (true) {
+            if (array1[a] <= array2[b]) {
+                min[i] = array1[a];
+                a++;
+                if (a >= array1.length) {
+                    for (int x = i + 1; x < min.length; x++) {
+                        min[x] = array2[b];
+                        i++;
+                    }
+                }
+            } else if (array1[a] > array2[b]) {
+                min[i] = array2[b];
+                b++;
+                if (b >= array2.length) {
+                    for (int x = i + 1; x < min.length; x++) {
+                        min[x] = array1[a];
+                        i++;
+                    }
+                }
+            }
+            i++;//此时做个判断
+            if (i>=min.length){
+                break;
+            }
+        }
+            return min;
     }
 }

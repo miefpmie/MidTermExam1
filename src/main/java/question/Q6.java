@@ -17,23 +17,26 @@ public class Q6 {
     public int ballDistance(int height) {
     //一个整数类型，表示弹力球经过的路程。
      int sum=0;
+     int x=0;
+     int y=0;
+     int a=0;
 
      //得出 落下的距离 200 这个是第一个    回弹的是第2个数字100   100第三个数字等于回弹的时候
      // 50第四个数字等于回弹的一半 第五个50等于四个数字  第六个数字25是第五个数字的一半  第七个数字25等于第六个数字
      // 第八个12数等于第七个数字的一半   第9个数字等于第八个数字 12  第10个数字6 小于10 不统计了
      // 计算过程中向下取整。(int) Math.floor()
-       int x1 =height;
-       int x2 = height/2;
-       int x3 = x2;
-       int x4= x3/2;
-       int x5=x4;
-       int x6= x5/2;//基数 等于height/2/2
+     //int x1 =height;   200// int x2 = height/2;  100// int x3 = x2;      100
+     //int x4= x3/2;  50  200/4//int x5=x4; 50// int x6= x5/2; 25   200/ 8  4*2   2*2*2  2的次方
+     //基数 等于height/2/2
+
+       while(true){
+           x=height*2^a;
+           y=x;
 
 
-     for (int x= height;;x++){
-         if()
-     }
-     
+
+
+       }
         
 
 
