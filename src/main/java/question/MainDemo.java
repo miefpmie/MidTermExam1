@@ -9,10 +9,9 @@ public class MainDemo {
         //int [] scores = {1,2,5,8};
         //q1.reverseScore(scores);
 
-        Q3 q3 = new Q3();
-        int [] array1 = {2,6,7,7,9};
-        int [] array2 = {3,8};
-        q3.mergeArray(array1,array2);
-        System.out.println(q3);
+        Q6 q6 = new Q6();
+
+         q6.ballDistance(200);
+        System.out.println(q6);
     }
 }
